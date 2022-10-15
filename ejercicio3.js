@@ -23,12 +23,20 @@ class Queue{
     size(){
         return this.items.length;
     }
+
+    peek(){
+        if(this.items.length===0){
+            return "None";
+        }
+        return this.items[0];
+    }
 }
 
 let queue = new Queue();
 
 console.log(queue.is_empty());
-queue.add(10);
+console.log(queue.peek());
+queue.add(2);
 queue.add(11);
 queue.add(12);
 queue.add(13);
@@ -40,3 +48,4 @@ queue.add(18);
 queue.add(19);
 console.log(queue.element());
 console.log(queue.size());
+console.log(queue.peek());
